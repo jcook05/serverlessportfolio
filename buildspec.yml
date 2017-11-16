@@ -6,8 +6,9 @@ phases:
        - echo Nothing to do yet
 artifacts:
   files:
-    - *.html
-    - *.ico
-    - *.pdf
+    - index.html
+    - error.html
+    - favicon.ico
+    - John_Cook.pdf
     - styles/*
     - images/*
