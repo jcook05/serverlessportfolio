@@ -54,19 +54,94 @@
 <script type="text/babel" date-presets="react">
 
 class NameInput extends React.Component {
- render() {
-    return (
-       <div>
-        <label>Name: <input id="name" type="text"/></label>
-        <button id="submit info"> Enter </button>
-       </div>
 
-    )
+ constructor(props) {
+    super(props);
 
+    this.state = {
+
+        message: {
+
+        type: undefined,
+        body: "I am jacks fucking wasted piece of shit worthless life"
+        }
+    }
+    
+
+    this.buttonClicked = this.buttonClicked.bind(this)
 
  }
 
+buttonClicked(evt) {
+let name = this.refs.nameInput.value;
 
+console.log(name.length)
+
+if (name.length < 2) {
+
+    console.log("error")
+    this.setState({
+
+        message: {
+
+        type: "error",
+        body: "I am jacks fucking wasted piece of shit worthless life"
+        }
+    }
+    )
+
+
+}  else {
+
+    console.log("In fucking name")
+
+    console.log(name)
+    this.setState({
+
+    message: {
+
+    type: "success",
+    body: "Welcome to React " + name + " have fun being unemployed"
+    }
+
+
+    }
+
+
+    )   
+
+}
+
+
+
+}
+
+ render() {
+
+    let msg = this.state.message;
+
+    return (
+       <div>
+        <label>Name: <input ref="nameInput" type="text"/></label>
+        <button onClick={this.buttonClicked}> Enter </button>
+        <MessageBox type={msg.type} message={msg.body}/>
+       </div>
+
+    )
+ }
+}
+
+class MessageBox extends React.Component {
+ render() {
+    return (
+       <div className={"messageBox " + (this.props.type || "hidden")}>
+       {this.props.message}
+
+       </div>
+       
+
+    )
+ }
 }
 
 ReactDOM.render(<NameInput/>, document.getElementById("content"))
