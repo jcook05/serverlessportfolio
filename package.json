@@ -1,6 +1,7 @@
 {
   "name": "reactportfolio",
   "version": "1.0.0",
+
   "description": "my portfolio",
   "main": "index.js",
   "scripts": {
@@ -13,14 +14,17 @@
     "url": "git+https://github.com/jcook05/serverlessportfolio.git"
   },
   "author": "",
+
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jcook05/serverlessportfolio/issues"
+    "url": "https://github.com/jcook05/serverlessportfolio/issues",
+
+  "homepage": "https://github.com/jcook05/serverlessportfolio#readme"
   },
-  "homepage": "https://github.com/jcook05/serverlessportfolio#readme",
   "dependencies": {
     "react": "^16.2.0",
     "react.dom": "^1.0.1"
+
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
