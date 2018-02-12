@@ -1,0 +1,31 @@
+{
+  "name": "reactportfolio",
+  "version": "1.0.0",
+  "description": "my portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack", 
+    "webpack-watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcook05/serverlessportfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcook05/serverlessportfolio/issues"
+  },
+  "homepage": "https://github.com/jcook05/serverlessportfolio#readme",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react.dom": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.11.0"
+  }
+}
