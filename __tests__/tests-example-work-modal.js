@@ -52,22 +52,45 @@ describe("ExampleWorkModal tests", () => {
 
     
 
+    let mockCloseModalFn = jest.fn();
+    const modal = shallow(<ExampleWorkModal example={myWork[1]} open={false}/>);
+    const openModal = shallow(<ExampleWorkModal example={myWork[1]} open={open} closeModal={mockCloseModalFn}/>);
+    
 
-    const ework = shallow(<ExampleWorkModal example={myWork[1]}/>);
 
-    let anchors = ework.find("a")
+    let anchors = modal.find("a")
 
-    let paragraphs = ework.find("p")
-    let header2 = ework.find("h2");
-    let images = ework.find("img");
+    let paragraphs = modal.find("p")
+    let header2 = modal.find("h2");
+    let images = modal.find("img");
 
     it("Should be a 'div' element", () => {
        
         //console.log(ework.debug());
-        expect(ework.type()).toEqual('div');
+        expect(modal.type()).toEqual('div');
         
 
     });
+
+    it("open set correctly", () => {
+       
+        //console.log(ework.debug());
+        expect(modal.find(".background--skyBlue").hasClass("modal--closed")).toBe(true);
+        expect(openModal.find(".background--skyBlue").hasClass("modal--open")).toBe(true);
+        
+
+    });
+
+    it("Should call closeModal on click", () => {
+       
+        // used just 1 class from className="color--cloud modal__closeButton"
+        openModal.find(".modal__closeButton").simulate('click');
+        
+        expect(mockCloseModalFn).toHaveBeenCalled();
+        
+
+    });
+
     it("Should contain an a element", () => {
        
         //console.log(ework.debug());
@@ -81,6 +104,7 @@ describe("ExampleWorkModal tests", () => {
         //console.log(ework.debug());
         // This is deprecated as node is now hidden by Enzyme
         //expect(images.node.props.src).toEqual(myWork[1].image.src);
+        // use get() instead to get by index
         expect(anchors.get(0).props.href).toEqual(myWork[1].href);
         
 

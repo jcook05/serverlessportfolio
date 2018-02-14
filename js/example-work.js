@@ -1,44 +1,106 @@
 import React from 'react';
+import ExampleWorkModal from './example-work-modal';
 
 class ExampleWork extends React.Component {
 
-    render() {
+  constructor(props) {
+    super(props);
 
-        return (
+    this.state = {
 
-            <section className="section section--alignCentered section--description">
-            { this.props.work.map( (example, idx) => {
+      'modalOpen': false,
+      'selectedExample': this.props.work[0]
 
-              return (
 
-                <ExampleWorkBubble example={example} key={idx}/>
-
-              )
-
-            })}
-            
-            
-            
-           </section>
-        )
     }
+
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+
+    }
+
+
+  openModal(evt, example) {
+
+    // set state = open
+    // set example
+
+    this.setState({
+
+      'modalOpen': true,
+      'selectedExample': example
+
+    }
+    )
+}
+
+  closeModal(evt) {
+
+    // set state = closed
+
+    this.setState({
+
+      'modalOpen': false
+     
+
+    })
+
+  }
+
+  render() {
+
+    return (
+
+
+      <span>
+
+        <section className="section section--alignCentered section--description">
+          {this.props.work.map((example, idx) => {
+
+            return (
+
+
+              <ExampleWorkBubble example={example} key={idx} openModal={this.openModal}/>
+
+
+
+
+
+            )
+
+          })}
+
+
+
+        </section>
+
+        <ExampleWorkModal example={this.state.selectedExample} open={this.state.modalOpen} closeModal={this.closeModal}/>
+      </span>
+
+
+
+
+
+    )
+  }
 
 }
 
 class ExampleWorkBubble extends React.Component {
 
-   render () {
+  render() {
 
     let example = this.props.example;
 
-      return (
+    return (
 
-        <div className="section__exampleWrapper">
-        <div className="section__example">
+      <div className="section__exampleWrapper" onClick={ (evt) => { this.props.openModal(evt, example) } }>
+     
+        <div className="section__example" >
           <img alt={example.image.desc}
-               className="section__exampleImage"
-               src={example.image.src}/>
-         
+            className="section__exampleImage"
+            src={example.image.src} />
+
           <dl className="color--cloud">
             <dt className="section__exampleTitle section__text--centered">
               {example.title}
@@ -50,10 +112,10 @@ class ExampleWorkBubble extends React.Component {
 
 
 
-      )
+    )
 
 
-   }
+  }
 
 
 }

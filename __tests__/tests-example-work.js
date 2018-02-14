@@ -43,10 +43,10 @@ describe("ExampleWork tests", () => {
 
     const ework = shallow(<ExampleWork work={myWork} />);
 
-    it("Should be a 'section' element", () => {
+    it("Should be a 'span' element", () => {
        
         //console.log(ework.debug());
-        expect(ework.type()).toEqual('section');
+        expect(ework.type()).toEqual('span');
         
 
     });
@@ -59,12 +59,31 @@ describe("ExampleWork tests", () => {
 
     });
 
+    it("Should allow modal to open", () => {
+       
+        ework.instance().openModal();
+
+        expect(ework.instance().state.modalOpen).toBe(true);
+        
+
+    });
+
+    it("Should allow modal to close", () => {
+       
+        ework.instance().closeModal();
+
+        expect(ework.instance().state.modalOpen).toBe(false);
+        
+
+    });
+
 });
 
 describe("ExampleWorkBubble tests", () => { 
 
+    let mockOpenModalFn = jest.fn();
 
-    let workbubble = shallow(<ExampleWorkBubble example={myWork[1]}/>);
+    let workbubble = shallow(<ExampleWorkBubble example={myWork[1]} openModal={mockOpenModalFn}/>);
     let images = workbubble.find("img");
 
     it("Should contain 1 image", () => {
@@ -84,5 +103,16 @@ describe("ExampleWorkBubble tests", () => {
         
 
     });
+
+    it("Should call openModal on click", () => {
+       
+
+        workbubble.find(".section__exampleWrapper").simulate('click');
+        
+        expect(mockOpenModalFn).toHaveBeenCalled();
+        
+
+    });
+
 
 });

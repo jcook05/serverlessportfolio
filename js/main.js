@@ -10,7 +10,7 @@ const MyWork = [
    {
         title: "Configuration Management",
         desc: "Configuration Management examples",
-        href: "example.com",
+        href: "http://example.com",
         image: {
             desc: "Configuration Management examples", 
             src: "images/IMG_0111.JPG"
@@ -20,7 +20,7 @@ const MyWork = [
   {
     title: "CICD",
     desc: "CICD example code, Jenkins build and deploy",
-    href: "example.com",
+    href: "http://example.com",
     image: {
         desc: "Continuous Integration Continuous Deployment examples", 
         src: "images/IMG_0117.JPG"
@@ -30,7 +30,7 @@ const MyWork = [
 {
     title: "Front End",
     desc: "Front end example code",
-    href: "example.com",
+    href: "http://example.com",
     image: {
         desc: "Front End examples", 
         src: "images/marmot.JPG"
