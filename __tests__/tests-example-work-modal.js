@@ -94,7 +94,7 @@ describe("ExampleWorkModal tests", () => {
     it("Should contain an a element", () => {
        
         //console.log(ework.debug());
-        expect(anchors.length).toEqual(1);
+        expect(anchors.length).toEqual(2);
         
 
     });
@@ -106,6 +106,14 @@ describe("ExampleWorkModal tests", () => {
         //expect(images.node.props.src).toEqual(myWork[1].image.src);
         // use get() instead to get by index
         expect(anchors.get(0).props.href).toEqual(myWork[1].href);
+        
+
+    });
+
+    it("Github set correctly", () => {
+       
+        
+        expect(anchors.get(1).props.href).toEqual(myWork[1].github);
         
 
     });

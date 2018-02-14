@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ExampleWork from './example-work';
+import CodeSample from './code-sample';
+
 
 
 
@@ -10,7 +12,8 @@ const MyWork = [
    {
         title: "Configuration Management",
         desc: "Configuration Management examples",
-        href: "http://example.com",
+        href: "../cm.html",
+        github: "https://github.com/jcook05/ansible",
         image: {
             desc: "Configuration Management examples", 
             src: "images/IMG_0111.JPG"
@@ -20,7 +23,8 @@ const MyWork = [
   {
     title: "CICD",
     desc: "CICD example code, Jenkins build and deploy",
-    href: "http://example.com",
+    href: "../cicd.html",
+    github: "../comingsoon.html",
     image: {
         desc: "Continuous Integration Continuous Deployment examples", 
         src: "images/IMG_0117.JPG"
@@ -30,7 +34,8 @@ const MyWork = [
 {
     title: "Front End",
     desc: "Front end example code",
-    href: "http://example.com",
+    href: "../frontend.html",
+    github: "https://github.com/jcook05/serverlessportfolio",
     image: {
         desc: "Front End examples", 
         src: "images/marmot.JPG"
@@ -42,8 +47,18 @@ const MyWork = [
 
 ]
 
+// need javascript conditional
 
+if (document.getElementById('example-work'))
+{
 ReactDOM.render(<ExampleWork work={MyWork}/>, document.getElementById('example-work'));
+}
+
+else if (document.getElementById('test-work'))
+{
+ReactDOM.render(<CodeSample />, document.getElementById('test-work'));
+}
+
 
 
 console.log("Loaded react-dom")

@@ -1,6 +1,9 @@
 import React from 'react';
 
 
+const sampletest = `import React from 'react';
+
+
 class ExampleWorkModal extends React.Component {
 
     render ()  {
@@ -47,4 +50,41 @@ class ExampleWorkModal extends React.Component {
 
 };
 
-export default ExampleWorkModal;
+export default ExampleWorkModal;`
+
+class CodeSample extends React.Component {
+
+    render ()  {
+        
+          
+
+        return (
+
+          <section className="section--code">
+            
+         <pre>
+            <code>    
+            
+            {sampletest}
+            
+            
+          </code>
+        </pre>
+      
+      
+      
+          </section>
+
+
+
+
+        )
+
+
+    };
+
+
+
+};
+
+export default CodeSample;
