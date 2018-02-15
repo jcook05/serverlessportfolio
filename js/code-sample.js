@@ -62,15 +62,12 @@ class CodeSample extends React.Component {
 
           <section className="section--code">
             
-         <pre>
-            <code>    
-            
-            {sampletest}
-            
-            
-          </code>
-        </pre>
-      
+            <section class='window'>
+            <label>React Class</label>
+              <pre>
+                { sampletest }
+              </pre>
+          </section>
       
       
           </section>
