@@ -173,22 +173,7 @@ class CodeSample extends React.Component {
         { reactsample[1].code }
         </pre>
         </section>; 
-
-    for (var i = 0; i < reactsample; i++) {
-        // note: we add a key prop here to allow react to uniquely identify each
-        // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
-
-        samples = <section className='window'>
-        <label>{ reactsample[i].title }</label>
-          <pre>
-            { reactsample[i].code }
-          </pre>
-       </section>;  
-
-        columns.push(<ObjectColumn key={i} samples />);
-      }
-
-
+    
       }
 
         return (
@@ -198,9 +183,10 @@ class CodeSample extends React.Component {
           <table>
             <tbody>
            <tr> 
-           <td> { samples } </td>
-           <td> { samples1 } </td>
-           
+           {reactsample.map(item =>
+
+           <TColumn data={item} key={item.title} /> )}
+
            </tr>
            </tbody>
            </table>
@@ -220,6 +206,14 @@ class CodeSample extends React.Component {
 
 
 };
+
+const TColumn = (props) => <td> 
+           <section className='window'>
+           <label>{ props.data.title }</label>
+           <pre>
+           { props.data.code }
+           </pre>
+           </section> </td>
 
 export default CodeSample;
 
