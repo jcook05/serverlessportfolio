@@ -22,7 +22,7 @@ class ExampleWorkModal extends React.Component {
           { example.title }
         </h2>
         <a className="color--skyBlue modal__link"
-           href={ example.href }>
+           href={ example.href + "?" +  example.key }>
           Check it out
         </a>
         <br></br> <br></br>

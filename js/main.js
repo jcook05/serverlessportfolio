@@ -11,6 +11,7 @@ const MyWork = [
 
    {
         title: "Configuration Management",
+        key: "cm",
         desc: "Configuration Management examples",
         href: "../cm.html",
         github: "https://github.com/jcook05/ansible",
@@ -22,6 +23,7 @@ const MyWork = [
   },
   {
     title: "CICD",
+    key: "cicd",
     desc: "CICD example code, Jenkins build and deploy",
     href: "../cicd.html",
     github: "../comingsoon.html",
@@ -33,8 +35,9 @@ const MyWork = [
 },
 {
     title: "Front End",
+    key: "frontend",
     desc: "Front end example code",
-    href: "../frontend.html",
+    href: "../codesample.html",
     github: "https://github.com/jcook05/serverlessportfolio",
     image: {
         desc: "Front End examples", 
