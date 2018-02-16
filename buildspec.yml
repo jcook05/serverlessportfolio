@@ -11,6 +11,7 @@ phases:
 artifacts:
   files:
     - index.html
+    - codesample.html
     - error.html
     - favicon.ico
     - John_Cook.pdf
