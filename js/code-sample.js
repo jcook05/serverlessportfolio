@@ -230,7 +230,7 @@ const cmsample = [
        
       },
  {
-  title: "Docker ",
+  title: "Docker - Jira ",
   code: `  FROM openjdk:8
 
   # Configuration variables.
