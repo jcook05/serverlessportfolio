@@ -13,7 +13,7 @@ const MyWork = [
         title: "Configuration Management",
         key: "cm",
         desc: "Configuration Management examples",
-        href: "../cm.html",
+        href: "../codesample.html",
         github: "https://github.com/jcook05/ansible",
         image: {
             desc: "Configuration Management examples", 
