@@ -360,7 +360,7 @@ class CodeSample extends React.Component {
         return (
 
                       
-          <section className="section--code">
+          <section className="section__exampleWrapper">
           <table>
             <tbody>
            <tr> 
