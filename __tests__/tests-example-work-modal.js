@@ -13,8 +13,10 @@ const myWork = [
 
     {
          title: "Configuration Management",
+         key: "cm",
          desc: "Configuration Management examples",
-         href: "example.com",
+         href: "../codesample.html",
+         github: "https://github.com/jcook05/ansible",
          image: {
              desc: "Configuration Management examples", 
              src: "images/IMG_0111.JPG"
@@ -23,8 +25,10 @@ const myWork = [
    },
    {
      title: "CICD",
+     key: "cicd",
      desc: "CICD example code, Jenkins build and deploy",
-     href: "example.com",
+     href: "../cicd.html",
+     github: "../comingsoon.html",
      image: {
          desc: "Continuous Integration Continuous Deployment examples", 
          src: "images/IMG_0117.JPG"
@@ -33,19 +37,17 @@ const myWork = [
  },
  {
      title: "Front End",
+     key: "frontend",
      desc: "Front end example code",
-     href: "example.com",
+     href: "../codesample.html",
+     github: "https://github.com/jcook05/serverlessportfolio",
      image: {
          desc: "Front End examples", 
          src: "images/marmot.JPG"
         
     } 
  }
- 
- 
- 
- ]
-
+]
 
 // ensure versions of adapter match your react-dom and react-test-renderer.   enzyme-adapter-react-16 for version 16 of react-dom and test-renderer.
 describe("ExampleWorkModal tests", () => { 
@@ -53,8 +55,8 @@ describe("ExampleWorkModal tests", () => {
     
 
     let mockCloseModalFn = jest.fn();
-    const modal = shallow(<ExampleWorkModal example={myWork[1]} open={false}/>);
-    const openModal = shallow(<ExampleWorkModal example={myWork[1]} open={open} closeModal={mockCloseModalFn}/>);
+    const modal = shallow(<ExampleWorkModal example={myWork[0]} open={false}/>);
+    const openModal = shallow(<ExampleWorkModal example={myWork[0]} open={open} closeModal={mockCloseModalFn}/>);
     
 
 
@@ -103,9 +105,9 @@ describe("ExampleWorkModal tests", () => {
        
         //console.log(ework.debug());
         // This is deprecated as node is now hidden by Enzyme
-        //expect(images.node.props.src).toEqual(myWork[1].image.src);
+        //expect(images.node.props.src).toEqual(myWork[0].image.src);
         // use get() instead to get by index
-        expect(anchors.get(0).props.href).toEqual(myWork[1].href);
+        expect(anchors.get(0).props.href).toEqual(myWork[0].href + "?" + myWork[0].key);
         
 
     });
@@ -113,7 +115,7 @@ describe("ExampleWorkModal tests", () => {
     it("Github set correctly", () => {
        
         
-        expect(anchors.get(1).props.href).toEqual(myWork[1].github);
+        expect(anchors.get(1).props.href).toEqual(myWork[0].github);
         
 
     });
@@ -122,7 +124,7 @@ describe("ExampleWorkModal tests", () => {
        
         
         //user childAt for text;
-        expect(paragraphs.childAt(0).text()).toEqual(myWork[1].desc);
+        expect(paragraphs.childAt(0).text()).toEqual(myWork[0].desc);
         
 
     });
@@ -131,7 +133,7 @@ describe("ExampleWorkModal tests", () => {
        
         
         //user childAt for text;
-        expect(header2.childAt(0).text()).toEqual(myWork[1].title);
+        expect(header2.childAt(0).text()).toEqual(myWork[0].title);
         
 
     });
@@ -140,7 +142,7 @@ describe("ExampleWorkModal tests", () => {
        
         
         //user childAt for text;
-        expect(images.get(0).props.alt).toEqual(myWork[1].image.desc);
+        expect(images.get(0).props.alt).toEqual(myWork[0].image.desc);
         
 
     });
@@ -149,7 +151,7 @@ describe("ExampleWorkModal tests", () => {
        
         
         //user childAt for text;
-        expect(images.get(0).props.src).toEqual(myWork[1].image.src);
+        expect(images.get(0).props.src).toEqual(myWork[0].image.src);
         
 
     });
