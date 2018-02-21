@@ -82,8 +82,8 @@ describe("ExampleWorkModal tests", () => {
     
 
     let mockCloseModalFn = jest.fn();
-    const modal = shallow(<ExampleWorkModal example={myWork[0]} open={false}/>);
-    const openModal = shallow(<ExampleWorkModal example={myWork[0]} open={open} closeModal={mockCloseModalFn}/>);
+    const modal = shallow(<ExampleWorkModal example={myWork[1]} open={false}/>);
+    const openModal = shallow(<ExampleWorkModal example={myWork[1]} open={open} closeModal={mockCloseModalFn}/>);
     
 
 
@@ -134,7 +134,7 @@ describe("ExampleWorkModal tests", () => {
         // This is deprecated as node is now hidden by Enzyme
         //expect(images.node.props.src).toEqual(myWork[0].image.src);
         // use get() instead to get by index
-        expect(anchors.get(0).props.href).toEqual(myWork[0].href + "?" + myWork[0].key);
+        expect(anchors.get(0).props.href).toEqual(myWork[1].href + "?" + myWork[1].key);
         
 
     });
@@ -142,7 +142,7 @@ describe("ExampleWorkModal tests", () => {
     it("Github set correctly", () => {
        
         
-        expect(anchors.get(1).props.href).toEqual(myWork[0].github);
+        expect(anchors.get(1).props.href).toEqual(myWork[1].github);
         
 
     });
@@ -158,7 +158,7 @@ describe("ExampleWorkModal tests", () => {
        console.log(paragraphs.get(0).props)
 
        // used props.children
-       expect(paragraphs.get(0).props.children).toEqual(myWork[0].desc);
+       expect(paragraphs.get(0).props.children).toEqual(myWork[1].desc);
         
 
     });
@@ -172,7 +172,7 @@ describe("ExampleWorkModal tests", () => {
        console.log(paragraphs.get(1).props)
 
        // used props.children
-       expect(paragraphs.get(1).props.children).toEqual(myWork[0].diagram.desc);
+       expect(paragraphs.get(1).props.children).toEqual(myWork[1].diagram.desc);
         
 
     });
@@ -183,7 +183,7 @@ describe("ExampleWorkModal tests", () => {
        
         
         //use childAt for text;
-        expect(header2.childAt(0).text()).toEqual(myWork[0].title);
+        expect(header2.childAt(0).text()).toEqual(myWork[1].title);
         
 
     });
@@ -192,7 +192,7 @@ describe("ExampleWorkModal tests", () => {
        
         
         //use childAt for text;
-        expect(images.get(0).props.alt).toEqual(myWork[0].image.desc);
+        expect(images.get(0).props.alt).toEqual(myWork[1].image.desc);
         
 
     });
@@ -201,7 +201,7 @@ describe("ExampleWorkModal tests", () => {
        
         
         //use childAt for text;
-        expect(images.get(0).props.src).toEqual(myWork[0].image.src);
+        expect(images.get(0).props.src).toEqual(myWork[1].image.src);
         
 
     });
