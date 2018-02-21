@@ -500,16 +500,28 @@ class CodeSample extends React.Component {
     //console.log(this.state.codeType);
 
 
-    
-    
+    this.stateSet = this.stateSet.bind(this);
+     
     }
+
+
+    stateSet(codetype) {
+
+      // set state = open
+      // set example
+  
+      this.setState({
+  
+        'codeType': codetype
+  
+      }
+      )
+  }
 
       
     render ()  {
 
-      let columns = null;
-      let samples = null;
-      let samples1 = null;
+      
       let items = [];
 
       console.log(this.state.codeType)
