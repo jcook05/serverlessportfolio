@@ -19,31 +19,55 @@ const MyWork = [
             desc: "Configuration Management examples", 
             src: "images/IMG_0111.JPG"
             
-       } 
+       },
+       diagram: {
+        desc: "DIAGRAM:",
+        image: ""     
+
+   } 
   },
   {
     title: "CICD",
     key: "cicd",
     desc: "CICD example code, Jenkins build and deploy",
-    href: "../cicd.html",
+    href: "../codesample.html",
     github: "../comingsoon.html",
     image: {
         desc: "Continuous Integration Continuous Deployment examples", 
         src: "images/IMG_0117.JPG"
        
-   } 
+   },
+   diagram: {
+    desc: "DIAGRAM:  Jenkins Docker Kubernetes Dev Environment",
+    image: {
+        src: "images/jendk.jpg",
+        desc: "CICD example code, Jenkins build and deploy"  
+    }
+} 
+
 },
 {
     title: "Front End",
     key: "frontend",
-    desc: "Front end example code",
+    desc: "Here are some front end development examples.  I have some examples in react.js as well as some examples in standard javascript.   This portfolio is also written primarily in \
+    react.js leveraging several react components.  Typically my front end development would focus on internal tools used by the development teams for infrastructure and CICD. You can view the \
+    basic examples in the CHECK IT OUT and GIT HUB EXAMPLES links above."  ,
     href: "../codesample.html",
     github: "https://github.com/jcook05/serverlessportfolio",
     image: {
-        desc: "Front End examples", 
+        desc: "Front End Example Code", 
         src: "images/marmot.JPG"
        
-   } 
+   }, 
+   
+   diagram: {
+        desc: "DIAGRAM: Serverless CICD for this Portfolio",
+        image: {
+                 src: "images/newport.jpg",
+                 desc: "Portfolio CICD Diagram"
+        }     
+
+   }
 }
 
 

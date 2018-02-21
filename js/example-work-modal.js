@@ -33,6 +33,13 @@ class ExampleWorkModal extends React.Component {
         <p  className="modal__description">
            { example.desc }
         </p>
+        <p  className="modal__description">
+           { example.diagram.desc }
+        </p>
+        <img  alt={example.diagram.image.desc }
+          
+           src={ example.diagram.image.src}
+        />
       </div>
     </div>
 

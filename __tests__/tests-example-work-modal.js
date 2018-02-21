@@ -21,33 +21,60 @@ const myWork = [
              desc: "Configuration Management examples", 
              src: "images/IMG_0111.JPG"
              
-        } 
+        },
+        diagram: {
+         desc: "DIAGRAM:",
+         image: ""     
+ 
+    } 
    },
    {
      title: "CICD",
      key: "cicd",
      desc: "CICD example code, Jenkins build and deploy",
-     href: "../cicd.html",
+     href: "../codesample.html",
      github: "../comingsoon.html",
      image: {
          desc: "Continuous Integration Continuous Deployment examples", 
          src: "images/IMG_0117.JPG"
         
-    } 
+    },
+    diagram: {
+     desc: "DIAGRAM:  Jenkins Docker Kubernetes Dev Environment",
+     image: {
+         src: "images/jendk.jpg",
+         desc: "CICD example code, Jenkins build and deploy"  
+     }
+ } 
+ 
  },
  {
      title: "Front End",
      key: "frontend",
-     desc: "Front end example code",
+     desc: "Here are some front end development examples.  I have some examples in react.js as well as some examples in standard javascript.   This portfolio is also written primarily in \
+     react.js leveraging several react components.  Typically my front end development would focus on internal tools used by the development teams for infrastructure and CICD. You can view the \
+     basic examples in the CHECK IT OUT and GIT HUB EXAMPLES links above."  ,
      href: "../codesample.html",
      github: "https://github.com/jcook05/serverlessportfolio",
      image: {
-         desc: "Front End examples", 
+         desc: "Front End Example Code", 
          src: "images/marmot.JPG"
         
-    } 
+    }, 
+    
+    diagram: {
+         desc: "DIAGRAM: Serverless CICD for this Portfolio",
+         image: {
+                  src: "images/newport.jpg",
+                  desc: "Portfolio CICD Diagram"
+         }     
+ 
+    }
  }
-]
+ 
+ 
+ 
+ ]
 
 // ensure versions of adapter match your react-dom and react-test-renderer.   enzyme-adapter-react-16 for version 16 of react-dom and test-renderer.
 describe("ExampleWorkModal tests", () => { 
@@ -122,17 +149,40 @@ describe("ExampleWorkModal tests", () => {
 
     it("Desc set correctly", () => {
        
-        
-        //user childAt for text;
-        expect(paragraphs.childAt(0).text()).toEqual(myWork[0].desc);
+       
+        paragraphs.forEach((node) => {
+            console.log(node.text())
+          });
+
+       // view props
+       console.log(paragraphs.get(0).props)
+
+       // used props.children
+       expect(paragraphs.get(0).props.children).toEqual(myWork[0].desc);
         
 
     });
 
+
+    it("Desc set correctly", () => {
+       
+       
+        
+       // view props
+       console.log(paragraphs.get(1).props)
+
+       // used props.children
+       expect(paragraphs.get(1).props.children).toEqual(myWork[0].diagram.desc);
+        
+
+    });
+
+   
+
     it("Title set correctly", () => {
        
         
-        //user childAt for text;
+        //use childAt for text;
         expect(header2.childAt(0).text()).toEqual(myWork[0].title);
         
 
@@ -141,7 +191,7 @@ describe("ExampleWorkModal tests", () => {
     it("Image Description set correctly", () => {
        
         
-        //user childAt for text;
+        //use childAt for text;
         expect(images.get(0).props.alt).toEqual(myWork[0].image.desc);
         
 
@@ -150,7 +200,7 @@ describe("ExampleWorkModal tests", () => {
     it("Image Source set correctly", () => {
        
         
-        //user childAt for text;
+        //use childAt for text;
         expect(images.get(0).props.src).toEqual(myWork[0].image.src);
         
 
