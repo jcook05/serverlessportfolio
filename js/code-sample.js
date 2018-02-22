@@ -477,6 +477,183 @@ const cicdsample = [
  
 ]
 
+const awssample = [
+
+  {
+       title: "Python AWS EC2 Library",
+       code: ` """Method to get all VPCs"""
+       def get_vpcs(self, profile):
+   
+           session = boto3.Session(profile_name=profile)
+           ec2 = boto3.resource("ec2", region_name="us-west-2")
+                    
+           my_vpcs = ec2.vpcs.all()
+           return my_vpcs
+   
+   
+       """Method to describe VPCs"""
+       def describe_vpcs(self,profile):
+   
+           session = boto3.Session(profile_name=profile)
+           ec2 = session.client('ec2')
+           
+           
+           my_vpcs = ec2.describe_vpcs()
+           return my_vpcs
+   
+   
+       """ Method to create a VPC with the default tenancy"""
+       def create_vpc(self, cidr, profile):
+   
+           session = boto3.Session(profile_name=profile)
+           ec2 = session.client('ec2')
+   
+           vpc = ec2.create_vpc(
+           CidrBlock=cidr,
+           AmazonProvidedIpv6CidrBlock=False,
+           DryRun=False,
+           InstanceTenancy='default'
+           )
+   
+       """Method to get images by filters"""
+       def get_imagesbyfilter(self, filters, profile):
+           
+   
+           session = boto3.Session(profile_name=profile)
+           boto3conn = session.resource("ec2", region_name="us-west-2")
+                     
+           my_images = boto3conn.images.filter(Owners=['self'], Filters=filters)
+           return my_images
+       
+       """Method to get images by filters"""
+       def get_imagesbyprofile(self, filters, profile):
+           
+           session = boto3.Session(profile_name=profile)
+   
+           boto3conn = session.resource("ec2", region_name="us-west-2")
+               
+           
+           my_images = boto3conn.images.filter(Owners=['self'], Filters=filters)
+           return my_images
+   
+       """Boto3 Method to get images by filters"""
+       def get_instancesbyfilter(self, filters, profile):
+   
+           session = boto3.Session(profile_name=profile)
+           boto3conn = session.resource("ec2", region_name="us-west-2")
+             
+           
+           instances = boto3conn.instances.filter(Filters=filters)
+           return instances
+   
+       
+       def get_instancesbyprofile(self, filters, profile):
+   
+   
+           session = boto3.Session(profile_name=profile)
+   
+           boto3conn = session.resource("ec2", region_name="us-west-2")
+                       
+           instances = boto3conn.instances.filter(Filters=filters)
+           return instances
+   `
+       
+      },
+ {
+  title: "Python AWS S3 Library",
+  code: `  from fabric.api import run,env, put, get, local, settings
+  from os import path
+  import time
+  from fabric.colors import green as _green, yellow as _yellow
+  import boto
+  import boto.ec2
+  import boto.ec2.autoscale
+  import boto3
+  from pprint import pprint
+  from botocore.exceptions import ClientError
+  from mimetypes import MimeTypes
+  
+  
+  class AwsS3Utilities:
+      
+
+      """Method to upload file to an S3 bucket"""
+      def uploadfile(self, filepath, filename, bucket):
+          ## Setup boto3 client with route53
+          
+          s3 = boto3.resource('s3')
+          bucket = s3.Bucket(bucket)
+          bucket.upload_file(filepath, filename)
+  
+      """Method to set existing object ACL to public-read"""
+      def setACLread(self, bucket, key):
+          s3 = boto3.resource('s3')
+           
+          s3.ObjectAcl(bucket, key).put(ACL='public-read')
+  
+      """Method to put an object with a public read ACL."""
+      def put_pub_object(self, filepath, filename, bucket):
+  
+          s3 = boto3.resource('s3')
+  
+  
+          print ("Uploading file " + filepath + ' to ' + filename)
+          try:                 
+              data = open(filepath, 'rb')
+              ftype, encoding = MimeTypes().guess_type(filepath)
+              conType = ftype if ftype is not None else encoding if encoding is not None else 'text/plain'    
+              s3.Object(bucket, filename).put(Body=data,ContentType=conType,ACL='public-read')
+          except ClientError as err:
+              print("Failed to upload artefact to S3.\n" + str(err))
+              return False
+          except IOError as err:
+              print("Failed to access artefact in this directory.\n" + str(err))
+              return False   
+          return True
+  
+      """Method to put an object with a private read ACL."""
+      def put_private_object(self, filepath, filename, bucket):
+  
+          s3 = boto3.resource('s3')
+  
+  
+          print ("Uploading file " + filepath + ' to ' + filename)
+          try:                 
+              data = open(filepath, 'rb')
+              ftype, encoding = MimeTypes().guess_type(filepath)
+              conType = ftype if ftype is not None else encoding if encoding is not None else 'text/plain'    
+              s3.Object(bucket, filename).put(Body=data,ContentType=conType,ACL='private')
+          except ClientError as err:
+              print("Failed to upload artefact to S3.\n" + str(err))
+              return False
+          except IOError as err:
+              print("Failed to access artefact in this directory.\n" + str(err))
+              return False   
+          return True
+  
+      """Method to put an object with a public read ACL."""
+      def get_object(self, targetdir, filename, bucket):
+  
+          s3 = boto3.resource('s3')
+  
+  
+          print ("Downloading file " + filename + ' to ' + targetdir)
+          try:                 
+             
+              newfile = targetdir + filename
+              s3.Bucket('mybucket').download_file(filename, newfile)    
+              ##s3.Object(bucket, filename).get()
+          except ClientError as err:
+              print("Failed to download artifact from S3.\n" + str(err))
+              return False
+          
+          return True`
+  
+ }
+ 
+]
+
+
 
 
 class CodeSample extends React.Component {
@@ -547,6 +724,14 @@ class CodeSample extends React.Component {
         console.log("cicdfound")
 
         items = cicdsample;
+   
+      }
+
+      if(this.state.codeType == "aws") {
+
+        console.log("awsfound")
+
+        items = awssample;
    
       }
 

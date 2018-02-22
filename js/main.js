@@ -68,6 +68,29 @@ const MyWork = [
         }     
 
    }
+},
+
+{
+    title: "AWS Python",
+    key: "aws",
+    desc: "Python function libraries leveraging boto2 and boto3 for AWS automation.  Libraries would be maintained and reused throughout the DevOps team. Reusing libraries \
+    ensures consistency within a team, increases efficiency and decreases cost."  ,
+    href: "../codesample.html",
+    github: "https://github.com/jcook05/aws",
+    image: {
+        desc: "Python AWS Libraries", 
+        src: "images/IMG_0117.JPG"
+       
+   }, 
+   
+   diagram: {
+        desc: "",
+        image: {
+                 src: "",
+                 desc: ""
+        }     
+
+   }
 }
 
 
