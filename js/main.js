@@ -56,6 +56,7 @@ const MyWork = [
     href: "../codesample.html",
     gdesc: "Github contains code for demonstration purposes not actual client deliverables.",
     github: "https://github.com/jcook05/serverlessportfolio",
+    gdesc: "Github contains code for demonstration purposes not actual client deliverables.",
     image: {
         desc: "Front End Example Code", 
         src: "images/marmot.JPG"
