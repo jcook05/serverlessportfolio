@@ -14,6 +14,7 @@ const MyWork = [
         key: "cm",
         desc: "Configuration Management examples",
         href: "../codesample.html",
+        gdesc: "Github contains code for demonstration purposes not actual client deliverables.",
         github: "https://github.com/jcook05/ansible",
         image: {
             desc: "Configuration Management examples", 
@@ -31,6 +32,7 @@ const MyWork = [
     key: "cicd",
     desc: "CICD example code, Jenkins build and deploy",
     href: "../codesample.html",
+    gdesc: "Github contains code for demonstration purposes not actual client deliverables.",
     github: "../comingsoon.html",
     image: {
         desc: "Continuous Integration Continuous Deployment examples", 
@@ -50,9 +52,9 @@ const MyWork = [
     title: "Front End",
     key: "frontend",
     desc: "Here are some front end development examples.  I have some examples in react.js as well as some examples in standard javascript.   This portfolio is also written primarily in \
-    react.js leveraging several react components, npm, webpack, enzyme and jest.  Typically my front end development would focus on internal tools used by the development teams for infrastructure and CICD. You can view a few very \
-    basic examples in the CHECK IT OUT and GIT HUB EXAMPLES links above."  ,
+    react.js leveraging several react components, npm, webpack, enzyme and jest.  Typically my front end development would focus on internal tools for infrastructure and CICD.",
     href: "../codesample.html",
+    gdesc: "Github contains code for demonstration purposes not actual client deliverables.",
     github: "https://github.com/jcook05/serverlessportfolio",
     image: {
         desc: "Front End Example Code", 
@@ -76,6 +78,7 @@ const MyWork = [
     desc: "Python function libraries leveraging boto2 and boto3 for AWS automation.  Libraries would be maintained and reused throughout the DevOps team. Reusing libraries \
     ensures consistency within a team, increases efficiency and decreases cost."  ,
     href: "../codesample.html",
+    gdesc: "Github contains code for demonstration purposes not actual client deliverables.",
     github: "https://github.com/jcook05/aws",
     image: {
         desc: "Python AWS Libraries", 

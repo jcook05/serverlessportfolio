@@ -26,6 +26,9 @@ class ExampleWorkModal extends React.Component {
           Check it out
         </a>
         <br></br> <br></br>
+        <p  className="modal__description">
+           {example.gdesc }
+        </p>
         <a className="color--skyBlue modal__link"
            href={ example.github }>
           Github Examples

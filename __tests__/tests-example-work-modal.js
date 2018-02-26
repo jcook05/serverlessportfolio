@@ -158,7 +158,23 @@ describe("ExampleWorkModal tests", () => {
        console.log(paragraphs.get(0).props)
 
        // used props.children
-       expect(paragraphs.get(0).props.children).toEqual(myWork[1].desc);
+       expect(paragraphs.get(0).props.children).toEqual(myWork[1].gdesc);
+        
+
+    });
+
+    it("Desc set correctly", () => {
+       
+       
+        paragraphs.forEach((node) => {
+            console.log(node.text())
+          });
+
+       // view props
+       console.log(paragraphs.get(0).props)
+
+       // used props.children
+       expect(paragraphs.get(1).props.children).toEqual(myWork[1].desc);
         
 
     });
@@ -172,7 +188,7 @@ describe("ExampleWorkModal tests", () => {
        console.log(paragraphs.get(1).props)
 
        // used props.children
-       expect(paragraphs.get(1).props.children).toEqual(myWork[1].diagram.desc);
+       expect(paragraphs.get(2).props.children).toEqual(myWork[1].diagram.desc);
         
 
     });
