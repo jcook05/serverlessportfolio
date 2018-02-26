@@ -25,13 +25,9 @@ class ExampleWorkModal extends React.Component {
            href={ example.href + "?" +  example.key }>
           Check it out
         </a>
-        <br></br> <br></br>
+        <br></br> 
         <p  className="modal__description">
-<<<<<<< HEAD
            {example.gdesc }
-=======
-           { example.gdesc }
->>>>>>> 741d09e7858bbaf297a4f1eb86d451199ddeaabf
         </p>
         <a className="color--skyBlue modal__link"
            href={ example.github }>
