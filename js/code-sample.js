@@ -311,7 +311,7 @@ const cicdsample = [
        title: "DSL Jobs Plugin",
        code: `// Will generate a job based on DevTemplate for each item in the apps array
        def apps = [  "WeatherService": 
-                   [ "repos": ["git@bitbucket.org:jcook05/weathermsbuild.git", '$BRANCH'],
+                   [ "repos": ["git@bitbucket.org:managedcicd/weathermsbuild.git", '$BRANCH'],
                     "name":"WeatherService",
                     "description":"prototype dotnet service",
                     "authtoken":"buildit",
@@ -321,20 +321,20 @@ const cicdsample = [
                   ],
                    "fromscratch":
                    // Illustrates the proper syntax for a GitLabs project.
-                     [ "repos": ["ssh://git@code.cablelabs.com:7999/GitLabsStandard/gitlabsproject.git", '$BRANCH'],
+                     [ "repos": ["ssh://git@code.managedcicd.com:7999/GitLabsStandard/gitlabsproject.git", '$BRANCH'],
                      "name":"fromscratch",
                      "description":"test service desc",
                      "authtoken":"buildit",
                      "imagename":"fromscratch",
                   ],
                    "StandardService":
-                     [ "repos": ["git@bitbucket.org:jcook05/netcoreservice.git", '$BRANCH'],
+                     [ "repos": ["git@bitbucket.org:managedcicd/netcoreservice.git", '$BRANCH'],
                      "name":"StandardService",
                      "description":"Standard Lightweight Microservice",
                      "authtoken":"buildit",
                      "imagename":"standardservice",
                      "deploymentname":"standardservice", 
-                     "baseimagepath":"managedcicd/dotnetservice"
+                     "baseimagepath":"managedcicd/standardservice"
                   ]
        
        
