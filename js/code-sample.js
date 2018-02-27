@@ -328,7 +328,7 @@ const cicdsample = [
                      "imagename":"fromscratch",
                   ],
                    "StandardService":
-                     [ "repos": ["git@bitbucket.org:managedcicd/netcoreservice.git", '$BRANCH'],
+                     [ "repos": ["git@bitbucket.org:managedcicd/standardservice.git", '$BRANCH'],
                      "name":"StandardService",
                      "description":"Standard Lightweight Microservice",
                      "authtoken":"buildit",
