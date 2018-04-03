@@ -33,9 +33,9 @@ const MyWork = [
     desc: "CICD example code, Jenkins build and deploy",
     href: "../codesample.html",
     gdesc: "Github contains code for demonstration purposes not actual client deliverables.",
-    github: "../comingsoon.html",
+    github: "https://github.com/jcook05/serverlessportfolio/blob/master/buildspec.yml",
     image: {
-        desc: "Continuous Integration Continuous Deployment examples", 
+        desc: "Continuous Integration Continuous Deployment examples.  See the buildspec.yml and deploy.py for some of the CICD wiring for this site.", 
         src: "images/IMG_0117.JPG"
        
    },
