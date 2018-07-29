@@ -100,7 +100,7 @@ const MyWork = [
 {
     title: "Serverless Framework",
     key: "serverless",
-    desc: "Examples of microservices implemented in various languages using the Serverless Framwork",
+    desc: "Examples of microservices implemented in various languages using the Serverless Framework",
     href: "../codesample.html",
     gdesc: "Github contains code for demonstration purposes not actual client deliverables.",
     github: "https://github.com/jcook05/Serverless",
