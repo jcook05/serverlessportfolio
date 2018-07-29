@@ -95,6 +95,29 @@ const MyWork = [
         }     
 
    }
+},
+
+{
+    title: "Serverless Framework",
+    key: "serverless",
+    desc: "Examples of microservices implemented in various languages using the Serverless Framwork",
+    href: "../codesample.html",
+    gdesc: "Github contains code for demonstration purposes not actual client deliverables.",
+    github: "https://github.com/jcook05/Serverless",
+    image: {
+        desc: "Serverless Framework", 
+        src: "images/IMG_0117.JPG"
+       
+   }, 
+   
+   diagram: {
+        desc: "",
+        image: {
+                 src: "",
+                 desc: ""
+        }     
+
+   }
 }
 
 
