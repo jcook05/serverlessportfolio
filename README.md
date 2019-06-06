@@ -42,3 +42,7 @@ deploy.py  -  Lambda deploy function.   Will take a .zip file from a staging S3 
 package.json  -  webpack package file
 
 buildspec.yml  -  AWS CodeBuild specification
+
+
+##Notes
+  When upgrading to babel-core 7.0.0 had to use npm install --save-dev "babel-core@^7.0.0-bridge.0" in accordance to this thread:  https://github.com/babel/babel/issues/8482
