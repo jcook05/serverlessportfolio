@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "babel-loader": "^7.1.5"
   },
   "jest": {
     "verbose": true,
