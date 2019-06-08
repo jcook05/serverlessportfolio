@@ -6,7 +6,6 @@ phases:
       nodejs: 8
   pre_build: 
     commands:
-     - npm i @babel-preset/react
      - npm install
      - npm test
   build:
