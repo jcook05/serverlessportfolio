@@ -1,17 +1,18 @@
 version: 0.2
 
 phases:
-   install:
-     runtime-versions:
-       runtime: nodejs: 8
-   pre_build: 
-     commands:
-      - npm i @babel-preset/react
-      - npm install
-      - npm test
-   build:
-     commands:
-      - npm run webpack
+  install:
+    runtime-versions:
+      runtime: version
+      runtime: version
+  pre_build: 
+    commands:
+     - npm i @babel-preset/react
+     - npm install
+     - npm test
+  build:
+    commands:
+     - npm run webpack
 artifacts:
   files:
     - index.html
