@@ -20,24 +20,27 @@
     "homepage": "https://github.com/jcook05/serverlessportfolio#readme"
   },
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "@babel-preset/react": "^7.0.0",
     "babel-loader": "^7.1.5",
-    "@babel/preset-react": "^7.0.0"
+    "dev": "^0.1.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "jest": {
     "verbose": true,
     "testURL": "http://localhost/"
   },
   "devDependencies": {
+    "@babel-preset/react": "^7.0.0",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
-    "@babel/preset-react": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^22.2.2",
+    "babel-loader": "^7.1.5",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^22.2.2",
+    "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-test-renderer": "^16.2.0",
     "webpack": "^3.11.0"
