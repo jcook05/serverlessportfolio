@@ -23,7 +23,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "babel-loader": "^7.1.5",
-    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-react": "^7.0.0"
   },
   "jest": {
     "verbose": true,
