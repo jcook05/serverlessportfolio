@@ -2,3 +2,4 @@ dist
 jest_*
 node_modules
 v8*
+terraform*
