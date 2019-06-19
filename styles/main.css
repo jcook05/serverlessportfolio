@@ -29,6 +29,8 @@
   
 }
 
+
+
 #certlist a 
   { 
   display: inline-block;      
@@ -36,11 +38,40 @@
   
   }
 
+P.blocktext {
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 40em;
+    align-items: center;
+    text-align: left;
+    
+}
+
 img, ul{
   padding:0; 
   margin:0;
   
 }
+
+
+.certed {
+  height: 29px;
+  width: 200px;
+ }
+
+
+#Library {
+  height: 17px;
+  width: 259px;
+}
+
+#Library:hover {
+  content: url('https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2017-09-29&ci=AWS00330518');
+  height: 17px;
+  width: 259px;
+}
+
 
 
 .background--lightGrey {
@@ -109,7 +140,15 @@ h1, h2, h3, h4, h5, h6 {
   overflow: auto;
 }
 
+/*
+  Images
+*/
 
+.brightness {
+  background-color: white;
+  display: inline-block;
+
+}
 
 
 /*
@@ -118,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section {
   font-size: 4.2rem;
-  min-height: 25vh;
+  min-height: 5vh;
   position: relative;
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -133,9 +172,11 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 5rem;
 }
 
-.section--alignCentered {
+.section--alignCentered{
   text-align: center;
+  
 }
+
 
 .section--description {
   font-size: 2.8rem;
@@ -231,11 +272,14 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-
 .cert {
   float: left;
   font-size: 3rem;
- 
+}
+
+
+.cert img:hover {
+  opacity: .5;
 }
 
 .section--cert {
