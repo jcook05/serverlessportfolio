@@ -59,18 +59,11 @@ class ExampleWork extends React.Component {
 
             return (
 
-
               <ExampleWorkBubble example={example} key={idx} openModal={this.openModal}/>
-
-
-
-
 
             )
 
           })}
-
-
 
         </section>
 

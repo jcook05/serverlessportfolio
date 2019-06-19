@@ -10,14 +10,14 @@ class ExampleWorkModal extends React.Component {
 
         return (
 
-      <div className={"background--skyBlue " + modalClass}>
+      <div className={"background--lightGrey " + modalClass}>
       <span className="color--cloud modal__closeButton" onClick={ (evt) => { this.props.closeModal(evt) } }>
         <i className="fa fa-window-close-o"></i>
       </span>
       <img alt={ example.image.desc }
            className="modal__image"
            src={ example.image.src }/>
-      <div className="color--cloud modal__text">
+      <div className="color--black modal__text">
         <h2 className="modal__title">
           { example.title }
         </h2>

@@ -42,6 +42,11 @@ img, ul{
   
 }
 
+
+.background--lightGrey {
+  background-color: rgb(211,211,211);
+}
+
 .background--skyBlue {
   background-color: rgb(52, 152, 219);
 }
@@ -61,6 +66,12 @@ img, ul{
 .color--darkgrey {
   color: rgb(44, 62, 80);
 }
+
+.color--black {
+  color: rgb(0,0,0);
+}
+
+
 
 .section__example {
   background-color: rgb(44, 62, 80);
@@ -251,12 +262,12 @@ h1, h2, h3, h4, h5, h6 {
   
   display: block;
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 20;
+  right: 20;
   left: 0;
   bottom: 0;
-  width: 100%;
-  height: 100%;
+  width: 85%;
+  height: 95%;
   
   z-index: 100;
 }

@@ -104,8 +104,8 @@ describe("ExampleWorkModal tests", () => {
     it("open set correctly", () => {
        
         //console.log(ework.debug());
-        expect(modal.find(".background--skyBlue").hasClass("modal--closed")).toBe(true);
-        expect(openModal.find(".background--skyBlue").hasClass("modal--open")).toBe(true);
+        expect(modal.find(".background--lightGrey").hasClass("modal--closed")).toBe(true);
+        expect(openModal.find(".background--lightGrey").hasClass("modal--open")).toBe(true);
         
 
     });

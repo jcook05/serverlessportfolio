@@ -48,30 +48,29 @@ const MyWork = [
 } 
 
 },
-{
-    title: "Front End",
-    key: "frontend",
-    desc: "Here are some front end development examples.  I have some examples in react.js as well as some examples in standard javascript.   This portfolio is also written primarily in \
-    react.js leveraging several react components, npm, webpack, enzyme and jest.  Typically my front end development would focus on internal tools for infrastructure and CICD.",
-    href: "../codesample.html",
-    gdesc: "Github contains code for demonstration purposes not actual client deliverables.",
-    github: "https://github.com/jcook05/serverlessportfolio",
-    gdesc: "Github contains code for demonstration purposes not actual client deliverables.",
-    image: {
-        desc: "Front End Example Code", 
-        src: "images/marmot.JPG"
-       
-   }, 
-   
-   diagram: {
-        desc: "DIAGRAM: Serverless CICD for this Portfolio",
-        image: {
-                 src: "images/newport.jpg",
-                 desc: "Portfolio CICD Diagram"
-        }     
 
-   }
-},
+{
+     title: "Front End",
+     key: "frontend",
+     desc: "Front end example code",
+     href: "../codesample.html",
+     gdesc: "Github contains code for demonstration purposes not actual client deliverables.",
+     github: "https://github.com/jcook05/serverlessportfolio/blob/master/buildspec.yml",
+     image: {
+         desc: "Front end example code", 
+         src: "images/IMG_0117.JPG"
+        
+    },
+    diagram: {
+     desc: "Serverless React.js site CICD Flow",
+     image: {
+         src: "images/newport.jpg",
+         desc: "Portfolio example CICD"  
+     }
+ } 
+ 
+ },
+
 
 {
     title: "AWS Python",
