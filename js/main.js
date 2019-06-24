@@ -117,6 +117,29 @@ const MyWork = [
         }     
 
    }
+},
+
+{
+    title: "Terraform",
+    key: "Terraform",
+    desc: "Terraform Examples",
+    href: "https://github.com/jcook05/terraform",
+    gdesc: "Github contains code for demonstration purposes not actual client deliverables.",
+    github: "https://github.com/jcook05/terraform",
+    image: {
+        desc: "Terraform", 
+        src: "images/IMG_0117.JPG"
+       
+   }, 
+   
+   diagram: {
+        desc: "",
+        image: {
+                 src: "",
+                 desc: ""
+        }     
+
+   }
 }
 
 
