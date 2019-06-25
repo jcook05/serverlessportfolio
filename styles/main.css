@@ -1,10 +1,4 @@
 /*
-  Theme colors
-    All selectors with colors that would need
-    to be changed for theme changes
-*/
-
-/*
   COLORS
 
   Sky
@@ -20,52 +14,6 @@
     rgb(236, 240, 241)
 */
 
-#certlist li {
-  
-  list-style-type: none;
-  margin-left: 25px;
-  line-height: 0.75em;
-  padding-bottom: 2px;
-  
-}
-
-#certlist a 
-  { 
-  display: inline-block;      
-  height:20px;
-  
-  }
-
-P.blocktext {
-    
-    margin: auto;
-    width: 70%;
-    align-items: center;
-    text-align: left;
-    
-}
-
-img, ul{
-  padding:0; 
-  margin:0;
-  
-}
-
-.certed {
-  height: 29px;
-  width: 200px;
- }
-
-#Library {
-  height: 17px;
-  width: 259px;
-}
-
-#Library:hover {
-  content: url('https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2017-09-29&ci=AWS00330518');
-  height: 17px;
-  width: 259px;
-}
 
 .background--lightGrey {
   background-color: rgb(211,211,211);
@@ -95,15 +43,6 @@ img, ul{
   color: rgb(0,0,0);
 }
 
-.section__example {
-  background-color: rgb(44, 62, 80);
-}
-
-/*
-  General Styles
-    These are styles to be inherited
-    through parent containers
-*/
 
 html {
   font-size: 62.5%;
@@ -114,44 +53,43 @@ body {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: .1rem;
-}
-
-/*
-  Helpers
-*/
-
-.margin--none {
-  margin: 0;
-}
-
 .overflow--auto {
   overflow: auto;
 }
 
-/*
-  Images
-*/
+.overflow--hidden {
+  overflow-x: hidden;
+}
 
-.brightness {
-  background-color: white;
-  display: inline-block;
+P.blocktext {
+    
+  margin: auto;
+  width: 70%;
+  align-items: center;
+  text-align: left;
+  
+}
 
+#Library {
+  height: 17px;
+  width: 259px;
+}
+
+#Library:hover {
+  content: url('https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2017-09-29&ci=AWS00330518');
+  height: 17px;
+  width: 259px;
 }
 
 
-/*
-  Sections
-*/
-
 .section {
+
+  
   font-size: 4.2rem;
-  min-height: 5vh;
+  min-height: 6vh;
   position: relative;
-  padding-top: 5rem;
-  padding-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem; 
   width: 100%;
 }
 
@@ -162,29 +100,16 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   padding-top: 5rem;
   padding-bottom: 5rem;
+} 
+
+.section__heading--largest {
+  float: left;
+  font-size: 5rem;
+  margin-left: 2rem;
 }
 
-.section--alignCentered{
-  text-align: center;
-   
-}
-
-.section--description {
-  font-size: 2.8rem;
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-}
-
-.section--code {
-  font-size: 2.0rem;
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-}
-
-.section__description {
-  margin: 0 auto;
-  margin-bottom: 2rem;
-  width: 50%;
+.section__example {
+  background-color: rgb(44, 62, 80);
 }
 
 .section__text--centered {
@@ -193,6 +118,86 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.section--alignCentered{
+  text-align: center;
+}
+
+.section--description {
+  font-size: 2.8rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+.full-width-bar {
+  margin: 0 -9999rem;
+  /* add back negative margin value */
+  padding: 0.25rem 9999rem;
+  min-height: 5vh;
+}
+
+.full-width-bar_text--centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+img, ul{
+  padding:0; 
+  margin:0;
+}
+
+.certed {
+  height: 29px;
+  width: 200px;
+ }
+
+ .certs {
+  height: 22px;
+ }
+
+ #certlist li {
+  
+  list-style-type: none;
+  margin-left: 25px;
+  line-height: 0.75em;
+  padding-bottom: 2px;
+  
+}
+
+#certlist a 
+  { 
+  display: inline-block;      
+  height:20px;
+  }
+  
+.section--social {
+  float: right;
+  line-height: 10rem;
+  margin-right: 2rem;
+}
+
+.social {
+  margin-right: 0.75rem;
+}
+
+.socialWrapper:last-child .social {
+  margin-right: 0;
+}
+
+.socialWrapper {
+  display: inline-block;
+  font-size: 3rem;
+}
+
+.margin--none {
+  margin: 0;
+}
+
+/* Example Section */
+
 
 .section__exampleWrapper,
 .section__example {
@@ -232,55 +237,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -50%;
 }
 
-/*
-  Header
-*/
-
-.section__heading--largest {
-  float: left;
-  font-size: 5rem;
-  margin-left: 2rem;
-}
-
-.section--social {
-  float: right;
-  line-height: 10rem;
-  margin-right: 2rem;
-}
-
-.social {
-  margin-right: 0.75rem;
-}
-
-.socialWrapper:last-child .social {
-  margin-right: 0;
-}
-
-.socialWrapper {
-  display: inline-block;
-  font-size: 3rem;
-}
-
-.cert {
-  float: left;
-  font-size: 3rem;
-}
-
-.cert img:hover {
-  opacity: .5;
-}
-
-.section--cert {
-  float: left;
-  line-height: 10rem;
-  margin-left: 2rem;
-}
-
-.certtest {
-  
-  font-size: 3rem;
-  
-}
 
 /*
   Modal
