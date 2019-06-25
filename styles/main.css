@@ -29,8 +29,6 @@
   
 }
 
-
-
 #certlist a 
   { 
   display: inline-block;      
@@ -41,7 +39,7 @@
 P.blocktext {
     
     margin: auto;
-    width: 75%;
+    width: 70%;
     align-items: center;
     text-align: left;
     
@@ -53,12 +51,10 @@ img, ul{
   
 }
 
-
 .certed {
   height: 29px;
   width: 200px;
  }
-
 
 #Library {
   height: 17px;
@@ -70,8 +66,6 @@ img, ul{
   height: 17px;
   width: 259px;
 }
-
-
 
 .background--lightGrey {
   background-color: rgb(211,211,211);
@@ -100,8 +94,6 @@ img, ul{
 .color--black {
   color: rgb(0,0,0);
 }
-
-
 
 .section__example {
   background-color: rgb(44, 62, 80);
@@ -176,7 +168,6 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
    
 }
-
 
 .section--description {
   font-size: 2.8rem;
@@ -270,13 +261,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 3rem;
 }
 
-
-
 .cert {
   float: left;
   font-size: 3rem;
 }
-
 
 .cert img:hover {
   opacity: .5;
