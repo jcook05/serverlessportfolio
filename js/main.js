@@ -140,6 +140,29 @@ const MyWork = [
         }     
 
    }
+},
+
+{
+    title: "Cloud Formation",
+    key: "CloudFormation",
+    desc: "CloudFormation Examples",
+    href: "https://github.com/jcook05/cloudformation",
+    gdesc: "Github contains code for demonstration purposes not actual client deliverables.",
+    github: "https://github.com/jcook05/cloudformation",
+    image: {
+        desc: "CloudFormation", 
+        src: "images/IMG_0117.JPG"
+       
+   }, 
+   
+   diagram: {
+        desc: "",
+        image: {
+                 src: "",
+                 desc: ""
+        }     
+
+   }
 }
 
 
