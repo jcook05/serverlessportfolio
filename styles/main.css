@@ -40,8 +40,7 @@
 
 P.blocktext {
     
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     width: 40em;
     align-items: center;
     text-align: left;
