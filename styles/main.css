@@ -84,7 +84,6 @@ P.blocktext {
 
 .section {
 
-  
   font-size: 4.2rem;
   min-height: 6vh;
   position: relative;
@@ -155,7 +154,7 @@ img, ul{
  }
 
  .certs {
-  height: 22px;
+  height: 18px;
  }
 
  #certlist li {
