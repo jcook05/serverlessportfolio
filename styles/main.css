@@ -81,7 +81,6 @@ P.blocktext {
   width: 259px;
 }
 
-
 .section {
 
   font-size: 4.2rem;
@@ -142,10 +141,13 @@ P.blocktext {
   transform: translate(-50%, -50%);
 }
 
-
 img, ul{
   padding:0; 
   margin:0;
+}
+
+a:hover {
+  color: red;
 }
 
 .certed {
@@ -157,13 +159,11 @@ img, ul{
   height: 28px;
  }
 
- #certlist li {
-  
+ #certlist li { 
   list-style-type: none;
   margin-left: 25px;
   line-height: 0.75em;
   padding-bottom: 2px;
-  
 }
 
 #certlist a 
@@ -171,7 +171,15 @@ img, ul{
   display: inline-block;      
   height:20px;
   }
-  
+
+#certlist img:hover {  border:2px solid rgb(55, 0, 255); 
+    box-shadow: 0 0 10px #333; 
+     -webkit-box-shadow: 0 0 10px #333;  
+     -moz-box-shadow: 0 0 10px #333;  
+     -o-box-shadow: 0 0 10px #333;  
+     -ms-box-shadow: 0 0 10px #333;
+ }
+
 .section--social {
   float: right;
   line-height: 10rem;
@@ -233,14 +241,12 @@ img, ul{
   opacity: 0.25;
   width: 250%;
   margin-left: -50%;
-  margin-top: -50%;
+  margin-top: -25%;
 }
-
 
 /*
   Modal
 */
-
 .modal--closed {
   display: none;
 }
