@@ -70,8 +70,6 @@ const MyWork = [
  } 
  
  },
-
-
 {
     title: "AWS Python",
     key: "aws",
@@ -82,8 +80,7 @@ const MyWork = [
     github: "https://github.com/jcook05/aws",
     image: {
         desc: "Python AWS Libraries", 
-        src: "images/IMG_0117.JPG"
-       
+        src: "images/IMG_0117.JPG"    
    }, 
    
    diagram: {
@@ -106,7 +103,6 @@ const MyWork = [
     image: {
         desc: "Serverless Framework", 
         src: "images/IMG_0117.JPG"
-       
    }, 
    
    diagram: {
@@ -128,20 +124,16 @@ const MyWork = [
     github: "https://github.com/jcook05/terraform",
     image: {
         desc: "Terraform", 
-        src: "images/IMG_0117.JPG"
-       
+        src: "images/IMG_0117.JPG"  
    }, 
-   
    diagram: {
         desc: "",
         image: {
                  src: "",
                  desc: ""
         }     
-
    }
 },
-
 {
     title: "Cloud Formation",
     key: "CloudFormation",
@@ -151,8 +143,7 @@ const MyWork = [
     github: "https://github.com/jcook05/cloudformation",
     image: {
         desc: "CloudFormation", 
-        src: "images/IMG_0117.JPG"
-       
+        src: "images/IMG_0117.JPG"  
    }, 
    
    diagram: {
@@ -161,9 +152,28 @@ const MyWork = [
                  src: "",
                  desc: ""
         }     
-
    }
-}
+},
+{
+     title: "Event Driven Security",
+     key: "eds",
+     desc: "Event Driven Security Examples",
+     href: "../codesample.html",
+     gdesc: "Github contains code for demonstration purposes not actual client deliverables.",
+     github: "https://github.com/jcook05/EdSec",
+     image: {
+         desc: "EdSec", 
+         src: "images/IMG_0117.JPG" 
+    }, 
+    
+    diagram: {
+         desc: "",
+         image: {
+                  src: "",
+                  desc: ""
+         }     
+    }
+ }
 
 
 
