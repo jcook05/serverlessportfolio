@@ -18,13 +18,11 @@ const MyWork = [
         github: "https://github.com/jcook05/ansible",
         image: {
             desc: "Configuration Management examples", 
-            src: "images/IMG_0111.JPG"
-            
+            src: "images/IMG_0111.JPG"      
        },
        diagram: {
         desc: "",
         image: ""     
-
    } 
   },
   {
@@ -37,7 +35,6 @@ const MyWork = [
     image: {
         desc: "Continuous Integration Continuous Deployment examples.  See the buildspec.yml and deploy.py for some of the CICD wiring for this site.", 
         src: "images/IMG_0117.JPG"
-       
    },
    diagram: {
     desc: "DIAGRAM:  A CICD flow illustrating an AWS, Jenkins, Docker and Kubernetes environment.",
@@ -46,7 +43,6 @@ const MyWork = [
         desc: "CICD example code, Jenkins build and deploy"  
     }
 } 
-
 },
 
 {
@@ -58,8 +54,7 @@ const MyWork = [
      github: "https://github.com/jcook05/serverlessportfolio/blob/master/buildspec.yml",
      image: {
          desc: "Front end example code", 
-         src: "images/IMG_0117.JPG"
-        
+         src: "images/IMG_0117.JPG" 
     },
     diagram: {
      desc: "Serverless React.js site CICD Flow",
@@ -68,7 +63,6 @@ const MyWork = [
          desc: "Portfolio example CICD"  
      }
  } 
- 
  },
 {
     title: "AWS Python",
@@ -89,7 +83,6 @@ const MyWork = [
                  src: "",
                  desc: ""
         }     
-
    }
 },
 
@@ -111,7 +104,6 @@ const MyWork = [
                  src: "",
                  desc: ""
         }     
-
    }
 },
 
@@ -174,9 +166,6 @@ const MyWork = [
          }     
     }
  }
-
-
-
 ]
 
 // need javascript conditional
